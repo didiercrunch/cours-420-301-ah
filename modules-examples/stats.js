@@ -1,3 +1,5 @@
+
+export const INFINITY = 30;
 export function average(lst){
     if(lst.length < 1){
         return NaN;
