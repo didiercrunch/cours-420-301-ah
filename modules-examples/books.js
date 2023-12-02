@@ -16,7 +16,7 @@ export function isValidIsbn13(str) {
         }
     }
     check = (10 - (sum % 10)) % 10;
-    return (check === str[str.length - 1]);
+    return (check.toString() === str[str.length - 1]);
 }
 
 export function isValidIsbn10(str) {
@@ -38,7 +38,7 @@ export function isValidIsbn10(str) {
     if (check === 10) {
         check = 'X';
     }
-    return (check === str[str.length - 1].toUpperCase());
+    return (check.toString() === str[str.length - 1].toUpperCase());
 
 }
 
@@ -46,3 +46,8 @@ export function isValidIsbn10(str) {
 export function isValidIsbn(str) {
     return isValidIsbn13(str) || isValidIsbn10(str);
 }
+
+console.log(isValidIsbn("ahs"))
+console.log(isValidIsbn("0-7754-2153-7"))
+console.log(isValidIsbn("978-5-0583-5600-2"))
+
