@@ -47,7 +47,4 @@ export function isValidIsbn(str) {
     return isValidIsbn13(str) || isValidIsbn10(str);
 }
 
-console.log(isValidIsbn("ahs"))
-console.log(isValidIsbn("0-7754-2153-7"))
-console.log(isValidIsbn("978-5-0583-5600-2"))
 
