@@ -1,5 +1,15 @@
 
+/**
+ * In statistics, infinity is set to 30.
+ */
 export const INFINITY = 30;
+
+/**
+ * Computes the average of the list.  If the list is empty, the
+ * function returns NaN
+ * @param {number[]} lst 
+ * @returns the average of the list.
+ */
 export function average(lst){
     if(lst.length < 1){
         return NaN;
@@ -14,6 +24,12 @@ export function average(lst){
 }
 
 
+/**
+ * Computes the standard deviation of the list.  If the list is empty, the
+ * function returns NaN
+ * @param {number[]} lst 
+ * @returns the standard deviation of the list.
+ */
 export function std(lst){
     if(lst.length < 1){
         return NaN;
