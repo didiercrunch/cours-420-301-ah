@@ -99,3 +99,106 @@ export class HockeyPlayer{
         return Math.floor((now - this.dateOfBirth.getTime()) / numberOfMillisecondsPerYear);
     }
 }
+
+/**
+ * Class representing a simple hockey player with some statistics attached to it.
+ */
+export class HockeyPlayerStatistics {
+    /**
+     * the fist name of the player.
+     */
+    firstName = ""
+    /**
+     * the last name of the player.
+     */
+    lastName = ""
+
+    /**
+     * the date of birth of the player.
+     */
+    dateOfBirth = null;
+
+    /**
+     * 
+     * @param {String} firstName the first name of the player
+     * @param {String} lastName  the last name of the player
+     * @param {Date} dateOfBirth the birth date of the player
+     */
+    constructor(firstName, lastName, dateOfBirth){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+
+    /**
+     * Set the total number the player has played
+     * @param {number} numberOfPlayedGames 
+     */
+    setNumberOfPlayedGames(numberOfPlayedGames){
+        this.numberOfPlayedGames = numberOfPlayedGames;
+    }
+
+    /**
+     * Set the total number the player has played in playoff
+     * @param {number} numberOfPlayedPlayoffGames 
+     */
+    setNumberOfPlayedPlayoffGames(numberOfPlayedPlayoffGames){
+        this.numberOfPlayedPlayoffGames = numberOfPlayedPlayoffGames;
+    }
+
+
+    /**
+     * Set the total number the points the player has scored during playoff games.
+     * @param {number} numberOfPointsDuringPlayoffGames
+     */
+    setNumberOfPointsDuringPlayoffGames(numberOfPointsDuringPlayoffGames){
+        this.numberOfPointsDuringPlayoffGames = numberOfPointsDuringPlayoffGames;
+    }
+
+    /**
+     * Set the total number the player has played
+     * @param {number} numberOfPoints
+     */
+    setNumberOfPoints(numberOfPoints){
+        this.numberOfPoints = numberOfPoints;
+    }
+
+
+    /**
+     * Set the total number of goal scored by the player
+     * @param {number} goals
+     */
+    setNumberOfGoals(goals){
+        this.numberOfGoals = numberOfGoals
+    }
+
+    /**
+     * the number of points scored by game.  This method requires
+     * the knowledge of numberOfPoints and numberOfPlayedGames to 
+     * return a meaningful result.
+     */
+    get pointsPerGame(){
+        return this.numberOfPoints / this.numberOfPlayedGames;
+    }
+
+    /**
+     * the number of points scored by playoff game.  This method requires
+     * the knowledge of numberOfPointsDuringPlayoffGames and 
+     * numberOfPlayedPlayoffGames to return a meaningful result.
+     */
+    get pointsPerPlayoffGame(){
+        return this.numberOfPointsDuringPlayoffGames / this.numberOfPlayedPlayoffGames;
+    }
+
+
+    /**
+     * the number of goals scored by game.  This method requires
+     * the knowledge of numberOfGoals and numberOfPlayedGames to 
+     * return a meaningful result.
+     */
+    get goalByPlayedGame(){
+        return this.numberOfGoals / this.numberOfPlayedGames;
+    }
+
+}
