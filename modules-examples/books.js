@@ -1,3 +1,10 @@
+
+/**
+ * Validate is the input string is a valid 13 digits ISBN as defined
+ * in https://en.wikipedia.org/wiki/ISBN
+ * @param {String} str a text we want to test if it is a real isbn
+ * @returns {boolean} true/false depending is str is a valid 13 digits ISBN
+ */
 export function isValidIsbn13(str) {
     let sum, digit, check, i;
 
@@ -19,6 +26,13 @@ export function isValidIsbn13(str) {
     return (check.toString() === str[str.length - 1]);
 }
 
+
+/**
+ * Validate is the input string is a valid 10 digits ISBN as defined
+ * in https://en.wikipedia.org/wiki/ISBN
+ * @param {String} str a text we want to test if it is a real isbn
+ * @returns {boolean} true/false depending is str is a valid 10 digits ISBN
+ */
 export function isValidIsbn10(str) {
     let sum, digit, weight, check, i;
 
@@ -43,6 +57,11 @@ export function isValidIsbn10(str) {
 }
 
 
+/**
+ * Validate is the input string is a valid ISBN https://en.wikipedia.org/wiki/ISBN
+ * @param {String} str a text we want to test if it is a real isbn
+ * @returns {boolean} true/false depending is str is a valid isbn
+ */
 export function isValidIsbn(str) {
     return isValidIsbn13(str) || isValidIsbn10(str);
 }

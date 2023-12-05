@@ -1,3 +1,8 @@
+
+/**
+ * Represent a the scoring of a hockey game.  The two teams
+ * playing are "home" and "away".
+ */
 export class HockeyGame{
     constructor(){
         this.home = 0
@@ -34,5 +39,4 @@ export class HockeyGame{
         }
         return "tie"
     }
-
 }
