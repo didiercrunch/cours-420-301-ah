@@ -30,7 +30,7 @@
             buildInputs = with pkgs; [deno
                                       python];
             shellHook = ''
-            alias build-docs=${pkgs.deno}/bin/deno doc --html --name="Programmation Client II" --output=./docs/   ./modules-examples/mod.js
+            alias build-docs=${pkgs.deno}/bin/deno doc --html --name="Programmation Client II" --output=./docs/ ./modules-examples/mod.js
             '';
          };
        }

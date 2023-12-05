@@ -4,6 +4,15 @@
  * playing are "home" and "away".
  */
 export class HockeyGame{
+    /**
+     * Score of the "home" team
+     */
+    home = 0;
+
+    /**
+     * Score of the "away" team
+     */
+    away = 0;
     constructor(){
         this.home = 0
         this.away = 0
