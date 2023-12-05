@@ -49,3 +49,51 @@ export class HockeyGame{
         return "tie"
     }
 }
+
+/**
+ * Class representing a simple hockey player.  The hockey player
+ * has a name (first and last) and a date of birth.
+ */
+class HockeyPlayer{
+    /**
+     * the fist name of the player.
+     */
+    firstName = ""
+    /**
+     * the last name of the player.
+     */
+    lastName = ""
+
+    /**
+     * the date of birth of the player.
+     */
+    dateOfBirth = null;
+
+    /**
+     * 
+     * @param {String} firstName the first name of the player
+     * @param {String} lastName  the last name of the player
+     * @param {Date} dateOfBirth the birth date of the player
+     */
+    constructor(firstName, lastName, dateOfBirth){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    /**
+     * the full name of the player.
+     */
+    get name(){
+        return this.firstName + " " + this.lastName
+    }
+
+    /**
+     * Returns the current age of the player in years.
+     */
+    currentAge(){
+        let now = Date.now();
+        let numberOfMillisecondsPerYear = 365 * 24 * 60 * 60 * 1000;
+        return Math.floor((now - this.dateOfBirth.getTime()) / numberOfMillisecondsPerYear);
+    }
+}
