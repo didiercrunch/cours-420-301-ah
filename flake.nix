@@ -32,6 +32,7 @@
                                       python];
             shellHook = ''
             alias build-docs=${pkgs.deno}/bin/deno doc --html --name="Programmation Client II" --output=./docs/ ./modules-examples/mod.js
+            alias build-docs-2=node_modules/.bin/documentation build -o docs -f html --project-name "Programmation Client II" --project-homepage "https://github.com/didiercrunch/cours-420-301-ah" modules-examples/mod.js
             '';
          };
        }

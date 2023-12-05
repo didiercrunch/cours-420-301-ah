@@ -1,4 +1,6 @@
 
+export const NUMBER_OF_PLAYER_PER_TEAM = 5;
+
 /**
  * Represent a the scoring of a hockey game.  The two teams
  * playing are "home" and "away".
