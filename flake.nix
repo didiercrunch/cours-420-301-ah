@@ -28,6 +28,7 @@
          packages = {};
          devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [deno
+                                      nodePackages.jsdoc
                                       python];
             shellHook = ''
             alias build-docs=${pkgs.deno}/bin/deno doc --html --name="Programmation Client II" --output=./docs/ ./modules-examples/mod.js

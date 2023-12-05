@@ -54,7 +54,7 @@ export class HockeyGame{
  * Class representing a simple hockey player.  The hockey player
  * has a name (first and last) and a date of birth.
  */
-class HockeyPlayer{
+export class HockeyPlayer{
     /**
      * the fist name of the player.
      */
