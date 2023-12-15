@@ -13,10 +13,19 @@ export class Point{
         this.#x = x;
         this.#y = y;
     }
+
+    /**
+     * Retoure la coordonée X du point.
+     * @returns {number}
+     */
     getX(){
         return this.#x;
     }
 
+    /**
+     * Retoure la coordonée Y du point.
+     * @returns {number}
+     */
     getY(){
         return this.#y;
     }
