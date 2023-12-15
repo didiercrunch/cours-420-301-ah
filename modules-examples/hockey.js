@@ -169,7 +169,7 @@ export class HockeyPlayerStatistics {
      * Set the total number of goal scored by the player
      * @param {number} goals
      */
-    setNumberOfGoals(goals){
+    setNumberOfGoals(numberOfGoals){
         this.numberOfGoals = numberOfGoals
     }
 
