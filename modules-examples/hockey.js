@@ -130,6 +130,13 @@ export class HockeyPlayerStatistics {
         this.dateOfBirth = dateOfBirth;
     }
 
+    /**
+     * Returns the current age of the player in years.
+     */
+    currentAge(){
+        return new HockeyPlayer(this.firstName, this.lastName, this.dateOfBirth).currentAge();
+    }
+
 
     /**
      * Set the total number the player has played
