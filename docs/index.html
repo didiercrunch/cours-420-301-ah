@@ -163,6 +163,12 @@
                       </a></li>
                       
                       <li><a
+                        href='#hockeyplayerstatisticscurrentage'
+                        class='regular pre-open'>
+                        #currentAge
+                      </a></li>
+                      
+                      <li><a
                         href='#hockeyplayerstatisticssetnumberofplayedgames'
                         class='regular pre-open'>
                         #setNumberOfPlayedGames
@@ -281,10 +287,34 @@
                 
                 <li><a
                   href='#point'
-                  class="">
+                  class=" toggle-sibling">
                   Point
-                  
+                  <span class='icon'>▸</span>
                 </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#pointgetx'
+                        class='regular pre-open'>
+                        #getX
+                      </a></li>
+                      
+                      <li><a
+                        href='#pointgety'
+                        class='regular pre-open'>
+                        #getY
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
                 
                 </li>
               
@@ -1249,6 +1279,55 @@ has a name (first and last) and a date of birth.</p>
       </div>
     </div>
   
+    <div class='border-bottom' id='hockeyplayerstatisticscurrentage'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>currentAge()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Returns the current age of the player in years.</p>
+
+    <div class='pre p1 fill-light mt0'>currentAge()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='hockeyplayerstatisticssetnumberofplayedgames'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -1501,7 +1580,7 @@ has a name (first and last) and a date of birth.</p>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>setNumberOfGoals(goals)</span>
+            <span class='code strong strong truncate'>setNumberOfGoals(numberOfGoals, goals)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1511,7 +1590,7 @@ has a name (first and last) and a date of birth.</p>
 
   <p>Set the total number of goal scored by the player</p>
 
-    <div class='pre p1 fill-light mt0'>setNumberOfGoals(goals: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>setNumberOfGoals(numberOfGoals: any, goals: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
   
   
 
@@ -1525,6 +1604,14 @@ has a name (first and last) and a date of birth.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numberOfGoals</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -2203,6 +2290,124 @@ représenté par deux coordonnées x et y.</p>
   
 
   
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='pointgetx'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getX()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Retoure la coordonée X du point.</p>
+
+    <div class='pre p1 fill-light mt0'>getX(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='pointgety'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getY()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Retoure la coordonée Y du point.</p>
+
+    <div class='pre p1 fill-light mt0'>getY(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
 
   
 
