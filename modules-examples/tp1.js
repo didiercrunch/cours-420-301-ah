@@ -89,6 +89,9 @@ export class Circle{
         this.#color = color;
     }
 
+    /**
+     * @param {Point} center, le nouveau centre du cercle.
+     */
     setCenter(center){
         this.#center = center;
     }
