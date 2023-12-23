@@ -1,4 +1,7 @@
 class CaseUtil{
+
+    constructor() {
+    }
     toSnakeCase(s){
         return s.replaceAll(" ", "_");
     }
@@ -6,7 +9,6 @@ class CaseUtil{
     toKebabCase(s){
         return s.replaceAll(" ", "-");
     }
-
 
     toCamelCase(s){
         while(s.indexOf(" ") !== -1){
@@ -31,6 +33,34 @@ class CaseUtil{
 
 }
 
-const caseUtil = new CaseUtil();
 
-alert(caseUtil.toAlexandreCase("bonjour le monde"))
+
+class CaseWord{
+    constructor(underlyingText) {
+        this.underlyingText = underlyingText;
+    }
+
+    kebebCase(){
+        const caseUtil = new CaseUtil();
+        return caseUtil.toKebabCase(this.underlyingText);
+    }
+
+    snakeCase(){
+        const caseUtil = new CaseUtil();
+        return caseUtil.toSnakeCase(this.underlyingText);
+    }
+}
+
+
+
+const wasim = new CaseWord("wasim est cool");
+const rachid = new CaseWord("rachid est cool");
+alert(wasim.kebebCase()); // wasim-est-cool
+alert(rachid.snakeCase()); // rachid_est_cool
+
+
+
+
+
+
+
