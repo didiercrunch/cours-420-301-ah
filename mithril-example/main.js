@@ -1,4 +1,4 @@
-import m from "https://esm.sh/mithril@2.2.2"
+import m from "https://esm.sh/mithril@2.2.2";
 
 function example1(){
     let div1 = m("b", {style: "font-family: monospace;"}, "didier");
@@ -26,3 +26,24 @@ function example3(){
 }
 
 m.render(document.getElementById("example-3"), example3());
+
+function exemple4(){
+    const subList = m("ol",
+        m("li", "unos"),
+        m("li", "dos"),
+        m("li", "tres"));
+    const lst = m("ul",
+        m("li", "un"),
+        m("li", "deux"),
+        m("li", subList));
+
+    const form = m("form",
+        m("label", "X: ", m("input", {type: "text"})),
+        m("label", "Y: ", m("input", {type: "text"})),
+        m("button", "envoyer!")
+        );
+    return m("div", lst, form);
+}
+
+const root = document.getElementById("example-4")
+m.render(root, exemple4());
